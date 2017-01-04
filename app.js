@@ -1,5 +1,7 @@
 'use strict';
 
+alert('This is a Quesitonnaire about Luay. Type in YES or NO to answer most of the questions.');
+
 var questionOne = prompt('Is Luay a happy person?').toUpperCase();
 if (questionOne === 'YES' || questionOne === 'Y' || questionOne === 'yep' || questionOne === 'yeah'){
   alert('Yes! I love life! :-)');

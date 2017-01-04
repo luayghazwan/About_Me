@@ -22,8 +22,9 @@ p#something-else {
 }
 
 p.more-content {
-  font-size:40px;
-  color: #b40dd3;
+  font-size:30px;
+  color: #ef6ce7;
+  text-shadow: 2px 2px 2px #000;
   text-align: center;
 }
 #something-else {
