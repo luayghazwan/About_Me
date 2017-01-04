@@ -1,17 +1,26 @@
 h1 {
   font-family: helvetica;
 }
+body {
+  background-color: #87b0d9;
+}
 p {
-  color: lightgrey;
+  color: Green;
+  size: 30px;
+  text-align: left;
+
 }
 
 p#something-else {
-  background-color: yellow;
+  background-color: #d68d4c;
+  text-align: center;
+
 }
 
-.more-content {
+p.more-content {
   background-color: #0000FF;
+  text-align: center;
 }
 #something-else {
-  border: 5px dashed #FF0000;
+  border: 10px solid #d68d4c;
 }
