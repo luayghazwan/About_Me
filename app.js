@@ -1,34 +1,38 @@
 'use strict';
 
-alert('This is a Quesitonnaire about Luay. Type in YES or NO to answer most of the questions.');
+alert('This is a Quesitonnaire about Me. Type in YES or NO to answer most of the questions.');
 
-var questionOne = prompt('Is Luay a happy person?').toUpperCase();
+//Q1
+var questionOne = prompt('Is Luay\'s favorite color Green?').toUpperCase();
 if (questionOne === 'YES' || questionOne === 'Y' || questionOne === 'yep' || questionOne === 'yeah'){
-  alert('Yes! I love life! :-)');
-  var answer1 = 'Yes! I love life! :-)';
+  alert('Right, I like Ninja Turtles so that\'s why. :-)');
+  var answer1 = 'Right, I like Ninja Turtles so that\'s why. :-)';
 } else {
-  alert('Well, you have to know me more.');
-  var answer1 = 'You answered No... Well, you have to know me more.';
+  alert('I know, there are not a lot of people who like this color, but I am unique. :-)');
+  var answer1 = 'I know, there are not a lot of people who like this color, but I am unique. :-)';
 }
 
+//Q2
 var questionTwo = prompt('Luay has visited more than 9 countries.').toUpperCase();
 if (questionTwo === 'YES' || questionTwo === 'Y' || questionTwo === 'yep' || questionTwo === 'yeah'){
-  alert('Right, I am a backpacker!');
-  var answer2 = 'Right, I am a backpacker!';
+  alert('Right, I am a backpacker! I have been to Malaysia, Singapore, Turkey, China, Lebanon, Egypt, Syria, Jordan, Germany aaaand USA');
+  var answer2 = 'Right, I am a backpacker! I have been to Malaysia, Singapore, Turkey, China, Lebanon, Egypt, Syria, Jordan, Germany aaaand USA';
 } else {
-  alert('Wrong answer. I already did. I am a traveler!');
-  var answer2 = 'Wrong answer. I am a traveler!';
+  alert('Wrong answer. I was born to travel! ');
+  var answer2 = 'Wrong answer. I was born to travel! I have been to Malaysia, Singapore, Turkey, China, Lebanon, Egypt, Syria, Jordan, Germany aaaand USA';
 }
 
-var questionThree = prompt('Today is my birthday! Type (Yes/True) if you believe me, (No/Lie) if you don\'t.').toUpperCase();
-if (questionThree === 'YES' || questionThree === 'Y' || questionThree === 'yep' || questionThree === 'yeah' || questionThree === 'True'){
-  alert('Nope it\'s not. That was tricky ;)');
-  var answer3 = 'Nope it\'s not. That was tricky ;)';
+//Q3
+var questionThree = prompt('Today is my birthday! Truth or Lie?').toUpperCase();
+if (questionThree === 'YES' || questionThree === 'Y' || questionThree === 'yep' || questionThree === 'yeah' || questionThree === 'TRUTH'){
+  alert('Nope it\'s not. It\'s on January 25th ;)');
+  var answer3 = 'Nope it\'s not. It\'s on January 25th ;)';
 } else {
-  alert('You got me :P ... It\'s not until the 25th');
-  var answer3 = 'You got me :P ... It\'s not until the 25th';
+  alert('You got me :P ... It\'s not until the 25th of Jan.');
+  var answer3 = 'You got me :P ... It\'s not until the 25th of Jan.';
 }
 
+//Q4
 var questionFour = prompt('My best friend\'s name start with the letter Q').toUpperCase();
 if (questionFour === 'YES' || questionFour === 'Y' || questionFour === 'yep' || questionFour === 'yeah'){
   alert('You are right! His name is Qusay');
@@ -38,17 +42,18 @@ if (questionFour === 'YES' || questionFour === 'Y' || questionFour === 'yep' || 
   var answer4 = 'False. My friend\'s name is Qusay.';
 }
 
-var questionFive = prompt('Do you think Luay is a Dog person?').toUpperCase();
+//Q5
+var questionFive = prompt('Do you think I\'m a Dog person?').toUpperCase();
 if (questionFive === 'YES' || questionFive === 'Y' || questionFive === 'yep' || questionFive === 'yeah'){
-  alert('Nope, I love rabbits more.');
-  var answer5 = 'Nope, I love rabbits more.';
+  alert('Yep, but I love rabbits more.');
+  var answer5 = 'I\'m Sorry, I love Dogs.';
 } else {
-  alert('True. My Favorite Animal is the Rabbit');
-  var answer5 = 'True. My Favorite Animal is the Rabbit';
+  alert('I\'m Sorry, I love Dogs.');
+  var answer5 = 'I\'m Sorry, I love Dogs.';
 }
 
-document.write('<p>' + 'Do you think I\'m a happy person?' + ' ' + questionOne + ' ' + '|' + ' ' + answer1 + '</p>');
-document.write('<p>' + 'Do you believe I have visited more than 9 countries before the age of 25?' + ' ' + questionTwo + ' ' + '|' + ' ' + answer2 + '</p>');
+document.write('<p>' + 'Is Luay\'s favorite color Green?' + ' ' + questionOne + ' ' + '|' + ' ' + answer1 + '</p>');
+document.write('<p>' + 'Do you believe I have visited more than 9 countries?' + ' ' + questionTwo + ' ' + '|' + ' ' + answer2 + '</p>');
 document.write('<p>' + 'Today is my birthday! Truth or Lie?' + ' ' + questionThree + ' ' + '|' + ' ' + answer3 + '</p>');
-document.write('<p>' + 'My favorite person\'s name start with the letter Q' + ' ' + questionFour + ' ' + '|' + ' ' + answer4 + '</p>');
-document.write('<p>' + 'Do you think Luay is a Dog person?' + ' ' + questionFive + ' ' + '|' + ' ' + answer5 + '</p>');
+document.write('<p>' + 'My best friend\'s name start with the letter Q' + ' ' + questionFour + ' ' + '|' + ' ' + answer4 + '</p>');
+document.write('<p>' + 'Do you think I\'m a Dog person?' + ' ' + questionFive + ' ' + '|' + ' ' + answer5 + '</p>');
