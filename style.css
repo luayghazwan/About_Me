@@ -5,20 +5,25 @@ body {
   background-color: #87b0d9;
 }
 p {
-  color: Green;
+  color: navy;
   size: 30px;
   text-align: left;
 
 }
-
+img {
+  float: right;
+  zoom: 50%;
+}
 p#something-else {
   background-color: #d68d4c;
-  text-align: center;
+  color: black;
+  size:24px;
 
 }
 
 p.more-content {
-  background-color: #0000FF;
+  font-size:40px;
+  color: #b40dd3;
   text-align: center;
 }
 #something-else {

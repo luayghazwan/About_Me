@@ -33,7 +33,7 @@ if (questionFour === 'YES' || questionFour === 'Y' || questionFour === 'yep' || 
   var answer4 = 'You are right! His name is Qusay';
 } else {
   alert('False. My friend\'s name is Qusay');
-  var answer4 = 'False. My friend\'s name is Qusay';
+  var answer4 = 'False. My friend\'s name is Qusay.';
 }
 
 var questionFive = prompt('Do you think Luay is a Dog person?').toUpperCase();
@@ -45,8 +45,8 @@ if (questionFive === 'YES' || questionFive === 'Y' || questionFive === 'yep' || 
   var answer5 = 'True. My Favorite Animal is the Rabbit';
 }
 
-document.write('<p>' + 'Do you think I\'m a happy person?' + ' ' + answer1 + '</p>');
-document.write('<p>' + 'Do you believe I have visited more than 9 countries before the age of 25?' + ' ' + answer2 + '</p>');
-document.write('<p>' + 'Today is my birthday! Truth or Lie?' + ' ' + answer3 + '</p>');
-document.write('<p>' + 'My favorite person\'s name start with the letter Q' + ' ' + answer4 + '</p>');
-document.write('<p>' + 'Do you think Luay is a Dog person?' + ' ' + answer5 + '</p>');
+document.write('<p>' + 'Do you think I\'m a happy person?' + ' ' + questionOne + ' ' + '|' + ' ' + answer1 + '</p>');
+document.write('<p>' + 'Do you believe I have visited more than 9 countries before the age of 25?' + ' ' + questionTwo + ' ' + '|' + ' ' + answer2 + '</p>');
+document.write('<p>' + 'Today is my birthday! Truth or Lie?' + ' ' + questionThree + ' ' + '|' + ' ' + answer3 + '</p>');
+document.write('<p>' + 'My favorite person\'s name start with the letter Q' + ' ' + questionFour + ' ' + '|' + ' ' + answer4 + '</p>');
+document.write('<p>' + 'Do you think Luay is a Dog person?' + ' ' + questionFive + ' ' + '|' + ' ' + answer5 + '</p>');
