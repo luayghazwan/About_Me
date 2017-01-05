@@ -77,12 +77,10 @@ for (var i = 0;i < 3;i++){
     questionSix = prompt('So Close! Try again!');
     counter++;
   } else if (questionSix == 10){
-    questionSix = alert('Good Guess! I have visited' + ' ' + coutnriesArray);
+    alert('Good Guess! I have visited 10 countries excluding my home country.' + ' ' + countriesArray + '.');
     rightAnswers++;
+    break;
   }
-}
-if (questionSix != 10){
-  alert('Wrong answer. I have visited 10 countries excluding my home country.' + ' ' + coutnriesArray + '.');
 }
 
 document.write('<p>' + 'So' + ' ' + player + ', you have' + ' ' + rightAnswers + ' ' + 'out of 7 correct answers. Here is the transcript of the original questions, your answers, and the comments that were displayed to you.');
