@@ -42,7 +42,7 @@ if (questionThree === 'YES' || questionThree === 'Y' || questionThree === 'YEP' 
 //Question 4
 var questionFour = prompt('Two years ago, I had a Nissan but I drove Audi').toUpperCase();
 if (questionFour === 'RIGHT' || questionFour === 'YES' || questionFour === 'REALLY' || questionFour === 'TRUTH'){
-  alert('You are right! My Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free');
+  alert('You are right! My old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free');
   var answer4 = 'You are right! My old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free';
   rightAnswers++;
 } else {
