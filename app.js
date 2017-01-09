@@ -1,8 +1,37 @@
 'use strict';
 var rightAnswers = 0;
-var answer1, answer2, answer3, answer4, answer5, answer6;
+
+var questions = ['Is Green my favorite Color?',
+  'Which one do you think I love more, Pizza or Burgers?',
+  'I was born in January but my Passport says April! Truth or Lie? Hint: Don\'t be fooled by April Fools\' Day',
+  'Two years ago, I had a Nissan but I drove Audi.',
+  'Do you think I\'m a Dog person?',
+  'How many countries have I visited before the age of 25? You have 4 tries',
+  'Can you guess a state that I have visited besides Washington?'];
+
 var countriesArray = ['Malaysia', ' Singapore', ' Turkey', ' UAE', ' Lebanon', ' Egypt', ' Syria', ' Jordan',' Germany', ' USA'];
 
+var answer1 = ['Sure! I am a Ninja Turtle. :-)', 'Wrong Answer. My favorite color is Green because I am a Ninja Turtle.'];
+var answer2 = ['Right, that\'s obvious, all Ninja Turtles love Pizza. :P', 'Nope, Ninja Turtles don\'t eat Burgers.'];
+var answer3 = ['Right, and I can\'t change it because my national ID was updated to the wrong one as well! SMH, Embassy Mistakes.', 'Well, I am afraid you are wrong. Our embassy makes awful mistakes.'];
+var answer4 = ['You are right! My old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free', 'I know it sounds hard to believe but my old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free'];
+var answer5 = ['YES! I love Dogs! I had Alaskan Husky back home and never was able to walk him outside the house because of the Hot Weather.', 'Incorrect. I love Dogs. I had Alaskan Husky back home and never was able to walk him outside the house because of the Hot Weather.'];
+var answer6 = ['Too High! try again.', 'Too Low! try again!', 'So Close! Try again!', 'Good Guess! I have visited 10 countries excluding my home country.'];
+var answer7 = ['New York', 'Oregon'];
+
+var tryAgain = 'Enter a new number. Attempts left: ';
+var possibleAnswers = ['YES','PIZZA','YES','YES','YES'];
+var userAnswer = new Array();
+
+//Document.Write Arrays
+var answerForDocument1 = new Array();
+var answerForDocument2 = new Array();
+var answerForDocument3 = new Array();
+var answerForDocument4 = new Array();
+var answerForDocument5 = new Array();
+var answerForDocument6 = new Array();
+
+//Game Start Function
 function start() {
   var player = prompt('Welcome to my mini Game! Please Enter Your Name to Continue...');
   if (player){
@@ -12,109 +41,146 @@ function start() {
 }
 
 //Question 1
-function questionOne(){
-  var userAnswer1 = prompt('What is my favorite Color?').toUpperCase();
-  if (userAnswer1 === 'GREEN'){
-    alert('Sure! I am a Ninja Turtle. :-)');
-    answer1 = 'Sure! I am a Ninja Turtle. :-)';
+function questionOne() {
+  userAnswer[0] = prompt(questions[0]).toUpperCase();
+  if (userAnswer[0] === possibleAnswers[0]) {
+    alert(answer1[0]);
+    answerForDocument1 = answer1[0];
     rightAnswers++;
   } else {
-    alert('Wrong Answer. My favorite color is Green because I am a Ninja Turtle.');
-    answer1 = 'Wrong Answer. My favorite color is Green because I am a Ninja Turtle.';
+    alert(answer1[1]);
+    answerForDocument1 = answer1[1];
   };
-  document.write('<p>' + 'Q1: What is my favorite Color?' + ' ' + userAnswer1 + ' ' + '|' + ' ' + 'A:' + ' ' + answer1 + '</p>');
+  document.write('<p>' + 'Q: ' + questions[0] + ' ' + userAnswer[0] + ' ' + '|' + ' ' + 'A:' + ' ' + answerForDocument1 + '</p>');
   return rightAnswers;
 }
 
 //Question 2
 function questionTwo(){
-  var userAnswer2 = prompt('Which one do you think I love more, Pizza or Burgers?').toUpperCase();
-  if (userAnswer2 === 'PIZZA') {
-    alert('Right, that\'s obvious, all Ninja Turtles love Pizza. :P');
-    answer2 = 'Right, that\'s obvious, all Ninja Turtles love Pizza. :P';
+  userAnswer[1] = prompt(questions[1]).toUpperCase();
+  if (userAnswer[1] === possibleAnswers[1]) {
+    alert(answer2[0]);
+    answerForDocument2 = answer2[0];
     rightAnswers++;
   } else {
-    alert('Nope, Ninja Turtles don\'t eat Burgers.');
-    answer2 = 'Nope, Ninja Turtles don\'t eat Burgers.';
+    alert(answer2[1]);
+    answerForDocument2 = answer2[1];
   }
-  document.write('<p>' + 'Q2: Which one do you think I love more, Pizza or Burgers?' + ' ' + answer2 + ' ' + '|' + ' ' + 'A:' + ' ' + answer2 + '</p>');
+  document.write('<p>' + 'Q: ' + questions[1] + ' ' + userAnswer[1] + ' ' + '|' + ' ' + 'A:' + ' ' + answerForDocument2 + '</p>');
   return rightAnswers;
 }
 
 //Question 3
 function questionThree(){
-  var userAnswer3 = prompt('I was born in January but my Passport says April! Truth or Lie? Hint: Don\'t be fooled by April Fools\' Day').toUpperCase();
-  if (userAnswer3 === 'YES' || userAnswer3 === 'Y' || userAnswer3 === 'TRUTH' || userAnswer3 === 'YEAH' || userAnswer3 === 'TRUE'){
-    alert('Right, and I can\'t change it because my national ID was updated to the wrong one as well! SMH, Embassy Mistakes.');
-    answer3 = 'Right, and I can\'t change it because my national ID was updated to the wrong one as well! SMH, Embassy Mistakes.';
+  userAnswer[2] = prompt(questions[2]).toUpperCase();
+  if (userAnswer[2] === possibleAnswers[2]) {
+    alert(answer3[0]);
+    answerForDocument3 = answer3[0];
     rightAnswers++;
   } else {
-    alert('Well, I am afraid you are wrong. Our embassy makes awful mistakes.');
-    answer3 = 'Well, I am afraid you are wrong. Our embassy makes awful mistakes.';
+    alert(answer3[1]);
+    answerForDocument3 = answer3[1];
   }
-  document.write('<p>' + 'Q3: I was born in January but my Passport says April! Truth or Lie?' + ' ' + answer3 + ' ' + '|' + ' ' + 'A:' + ' ' + answer3 + '</p>');
+  document.write('<p>' + 'Q: ' + questions[2] + ' ' + answer3 + ' ' + '|' + ' ' + 'A:' + ' ' + answerForDocument3 + '</p>');
   return rightAnswers;
 }
 
 //Question 4
 function questionFour(){
-  var userAnswer4 = prompt('Two years ago, I had a Nissan but I drove Audi').toUpperCase();
-  if (userAnswer4 === 'RIGHT' || userAnswer4 === 'YES' || userAnswer4 === 'REALLY' || userAnswer4 === 'TRUE'){
-    alert('You are right! My old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free');
-    answer4 = 'You are right! My old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free';
+  userAnswer[3] = prompt(questions[3]).toUpperCase();
+  if (userAnswer[3] === possibleAnswers[3]){
+    alert(answer4[0]);
+    answerForDocument4 = answer4[0];
     rightAnswers++;
   } else {
-    alert('I know it sounds hard to believe but my old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free');
-    answer4 = 'I know it sounds hard to believe but my old Boss has an A4 Audi that he doesn\'t like. He did let me drive it for 6 months for free';
+    alert(answer5[0]);
+    answerForDocument4 = answer5[0];
   }
-  document.write('<p>' + 'Q4: I was born in January but my Passport says April! Truth or Lie?' + ' ' + answer4 + ' ' + '|' + ' ' + 'A:' + ' ' + answer4 + '</p>');
+  document.write('<p>' + 'Q: ' + questions[3] + ' ' + userAnswer[3] + ' ' + '|' + ' ' + 'A:' + ' ' + answerForDocument4 + '</p>');
   return rightAnswers;
 }
 
 //Question 5
 function questionFive(){
-  var userAnswer5 = prompt('Do you think I\'m a Dog person?').toUpperCase();
-  if (userAnswer5 === 'YES' || userAnswer5 === 'Y' || userAnswer5 === 'YEP' || userAnswer5 === 'YEAH'){
-    alert('YES! I love Dogs! I had Alaskan Husky back home and never was able to walk him outside the house because of the Hot Weather.');
-    answer5 = 'YES! I love Dogs! I had Alaskan Husky back home and never was able to walk him outside the house because of the Hot Weather.';
+  userAnswer[4] = prompt(questions[4]).toUpperCase();
+  if (userAnswer[4] === possibleAnswers[4]){
+    alert(answer5[0]);
+    answerForDocument5 = answer5[0];
     rightAnswers++;
   } else {
-    alert('Incorrect. I love Dogs. I had Alaskan Husky back home and never was able to walk him outside the house because of the Hot Weather.');
-    answer5 = 'Incorrect. I love Dogs. I had Alaskan Husky back home and never was able to walk him outside the house because of the Hot Weather.';
+    alert(answer5[1]);
+    answerForDocument5 = answer5[1];
   }
-  document.write('<p>' + 'Q5: Do you think I\'m a Dog person?' + ' ' + userAnswer5 + ' ' + '|' + ' ' + 'A:' + ' ' + answer5 + '</p>');
+  document.write('<p>' + 'Q: ' + questions[4] + ' ' + userAnswer[4] + ' ' + '|' + ' ' + 'A:' + ' ' + answerForDocument5 + '</p>');
   return rightAnswers;
 }
 
 //Question 6
-function countries() {
+function questionSix() {
   var counter = 0;
-  var userAnswer6 = prompt('How many countries have I visited before the age of 25? You have 4 tries');
+  var attempts = 3;
+  userAnswer[5] = prompt(questions[5]);
   counter++;
-  for (var i = 0;i < 3;i++){
-    if (userAnswer6 > 12){
-      prompt('Too High! try again.');
-      answer6 = 'Too High! try again.';
+  for (var i = 0 ; i < 3 ; i++){
+    if (userAnswer[5] > 12){
+      alert(answer6[0]);
+      answerForDocument6 = answer6[0];
+      userAnswer[5] = prompt(tryAgain + attempts);
       counter++;
-    } else if (userAnswer6 < 8){
-      prompt('Too Low! try again!');
-      answer6 = 'Too Low! try again!';
+      attempts--;
+    } else if (userAnswer[5] < 8){
+      alert(answer6[1]);
+      answerForDocument6 = answer6[1];
+      userAnswer[5] = prompt(tryAgain + attempts);
       counter++;
-    } else if (userAnswer6 == 8 || userAnswer6 == 9 || userAnswer6 == 11 || userAnswer6 == 12){
-      prompt('So Close! Try again!');
-      answer6 = 'So Close! Try again!';
+      attempts--;
+    } else if (userAnswer[5] == 8 || userAnswer[5] == 9 || userAnswer[5] == 11 || userAnswer[5] == 12){
+      alert(answer6[2]);
+      answerForDocument6 = answer6[2];
+      userAnswer[5] = prompt(tryAgain + attempts);
       counter++;
-    } else if (userAnswer6 == 10){
-      alert('Good Guess! I have visited 10 countries excluding my home country.' + ' ' + countriesArray + '.');
-      answer6 = 'Good Guess! I have visited 10 countries excluding my home country.';
+      attempts--;
+    } else if (userAnswer[5] == 10) {
       rightAnswers++;
       break;
     }
   }
-  if (userAnswer6 != 10){
-    alert('Sorry, you used all your attempts...the answer was: 10');
+  if (userAnswer[5] == 10){
+    alert('Good Guess! I have visited 10 countries excluding my home country.' + ' ' + countriesArray + '.');
+    answerForDocument6 = 'Good Guess! I have visited 10 countries excluding my home country.';
   }
-  document.write('<p>' + 'Q6: How many countries have I visited before the age of 25?' + 'No. of attempts:' + ' ' + counter + '.' + ' ' + 'A:' + ' ' + answer6 + ' ' + '|' + ' ' + countriesArray + '.' + '</p>');
+  if (attempts == 0) {
+    alert('Sorry, ' + player + '! you have used all your tries. I have visited 10 countries.');
+  }
+  document.write('<p>' + 'Q: ' + questions[5] + 'No. of attempts used:' + ' ' + counter + '.' + ' ' + 'A:' + ' ' + answerForDocument6 + ' ' + '|' + ' ' + countriesArray[0] + countriesArray[1] + countriesArray[2] + countriesArray[3] + ',' );
+  return rightAnswers;
+}
+
+// Question 7
+function questionSix() {
+  var counter = 0;
+  var attempts = 5;
+  userAnswer[6] = prompt(questions[5]);
+  counter++;
+  for (var i = 0 ; i < 3 ; i++){
+    if (userAnswer[6] > 12){
+      alert(answer6[0]);
+      answerForDocument7 = answer6[0];
+      userAnswer[6] = prompt(tryAgain + attempts);
+      counter++;
+      attempts--;
+    }
+  }
+  if (userAnswer[6] == 10){
+    alert('Good Guess! I have visited 10 countries excluding my home country.' + ' ' + countriesArray + '.');
+    answerForDocument7 = 'Good Guess! I have visited 10 countries excluding my home country.';
+  }
+  if (attempts == 0) {
+    alert('Sorry, ' + player + '! you have guessed wrong. The states I visited were ' + answer7[0] + ' and ' + answer7[1] + '.');
+  }
+  alert('Thank you for playing this game! :-)');
+
+  // document.write('<p>' + 'Q: ' + questions[6] + 'No. of attempts used:' + ' ' + counter + '.' + ' ' + 'A:' + ' ' + answerForDocument7 + ' ' + '|' + ' ' + countriesArray + '.' + '</p>');
   return rightAnswers;
 }
 
@@ -124,6 +190,7 @@ questionTwo();
 questionThree();
 questionFour();
 questionFive();
-countries();
+questionSix();
+questionSeven();
 
-document.write('<p>' + 'So' + ' ' + player + ', you have' + ' ' + rightAnswers + ' ' + 'out of 7 correct answers. Here is the transcript of the original questions, your answers, and the comments that were displayed to you.' + '</p>');
+document.write('<p>' + 'Thank you' + ' ' + player + ', you have answered ' + rightAnswers + ' out of 7 questions correctly! Please, visit us later for more games!' + '</p>');
