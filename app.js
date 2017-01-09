@@ -9,7 +9,7 @@ var questions = ['Is Green my favorite Color? (Yes/No) ',
   'How many countries have I visited before the age of 25? (Yes/No) ',
   'Can you guess a state that I have visited besides Washington? '];
 
-var countriesArray = ['Malaysia', ' Singapore', ' Turkey', ' UAE', ' Lebanon', ' Egypt', ' Syria', ' Jordan',' Germany', ' USA'];
+var countriesArray = ['Malaysia', ' Singapore', ' Turkey', ' UAE', ' Lebanon', ' Egypt', ' Syria', ' Jordan',' Germany', ' USA.'];
 
 var answer1 = ['Sure! I am a Ninja Turtle. :-)', 'Wrong Answer. My favorite color is Green because I am a Ninja Turtle.'];
 var answer2 = ['Right, that\'s obvious, all Ninja Turtles love Pizza. :P', 'Nope, Ninja Turtles don\'t eat Burgers.'];
@@ -141,13 +141,14 @@ function questionSix() {
     }
   }
   if (userAnswer[5] == 10){
-    alert('Good Guess! I have visited 10 countries excluding my home country.' + ' ' + countriesArray + '.');
+    alert('Good Guess! I have visited 10 countries excluding my home country.' + ' ' + countriesArray.join(',') + '.'); //we used .join to add comas or character among the arrays
     answerForDocument[5] = 'Good Guess! I have visited 10 countries excluding my home country.';
   }
   if (attempts === 0 && userAnswer[5] != 10) {
     alert('Sorry, ' + player + '! you have used all your tries. I have visited 10 countries.');
   }
-  document.write('<p>' + 'Q6: ' + questions[5] + 'No. of attempts used:' + ' ' + counter + '.' + ' ' + 'A:' + ' ' + answerForDocument[5] + ' ' + ' ' + ' ' + countriesArray[0] + countriesArray[1] + countriesArray[2] + countriesArray[3] + countriesArray[4] + countriesArray[5] + countriesArray[6] + countriesArray[7] + countriesArray[8] + countriesArray[9] + '.');
+//using .toString converts the array to string separated by comas.
+  document.write('<p>' + 'Q6: ' + questions[5] + 'No. of attempts used:' + ' ' + counter + '.' + ' ' + 'A:' + ' ' + answerForDocument[5] + ' ' + ' ' + ' ' + countriesArray.toString() + '.');
   return rightAnswers;
 }
 
@@ -157,7 +158,7 @@ function questionSeven() {
   userAnswer[6] = prompt(questions[6] + ' Attempts left: ' + attempts).toUpperCase();
   for (var i = 0 ; i < 5 ; i++){
     if (userAnswer[6] == answer7[0] || userAnswer[6] == answer7[1]) {
-      alert('You guessed! Yes, I have been to ' + answer7[0] + ' and ' + answer7[1] + ' so far.'); alert('That was the last question.' + player + '! Enjoy my page :-)');
+      alert('You guessed! Yes, I have been to ' + answer7[0] + ' and ' + answer7[1] + ' so far.'); alert('That was the last question ' + player + '! Enjoy my page :-)');
       answerForDocument[6] = userAnswer[6];
       rightAnswers++;
       break;
