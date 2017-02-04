@@ -147,8 +147,8 @@ function questionSix() {
   if (attempts === 0 && userAnswer[5] != 10) {
     alert('Sorry, ' + player + '! you have used all your tries. I have visited 10 countries.');
   }
-//using .toString converts the array to string separated by comas.
   document.write('<p>' + 'Q6: ' + questions[5] + 'No. of attempts used:' + ' ' + counter + '.' + ' ' + 'A:' + ' ' + answerForDocument[5] + ' ' + ' ' + ' ' + countriesArray.toString() + '.');
+  //using .toString converts the array to string separated by comas.
   return rightAnswers;
 }
 
